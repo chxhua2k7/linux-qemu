@@ -1,6 +1,4 @@
 @echo off
-setlocal
-chcp 65001
 
 REM --- Get this folder ---
 set SCRIPT_DIR=%~dp0
@@ -11,7 +9,7 @@ cd /d "%QEMU_PATH%"
 
 REM --- Looking for file img ---
 if not exist "%IMG_PATH%" (
-    echo 錯誤：找不到"%IMG_PATH%"
+    echo Error: "%IMG_PATH%" not found.
     pause
     exit /b
 )
